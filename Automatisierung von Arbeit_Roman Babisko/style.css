@@ -1,0 +1,174 @@
+body{
+	background: url(https://www.allwhitebackground.com/images/6/Medical-Background-Photo.jpg);
+	/*Hintergrundbild*/
+    color: darkblue;
+	/*Schriftfatbe*/
+    background-color: rgb(148, 147, 147);
+	/*Hintergrundfarbe*/
+    font-family: sans-serif;
+	/*Schriftart*/
+    text-align: center;
+	/*Horizontale Ausrichtung*/
+    font-size: large;
+	/*Schriftgröße*/
+    margin: 0;
+	/*Abstand zum Seitenrand*/
+} /*Änderung des Designs für die gesamte Website*/
+
+/*Design der Navigationsleiste: Anfang*/
+
+.ico img{
+	height: 66px;
+	/*Rahmenhöhe*/
+	margin-top: 7px;
+	/*absoluter Abstand zum Seitenrand oben*/
+	padding: 0 0 3 16px;
+	/*Tabellenabstand*/
+}
+
+#menuVertical{
+	width: 71px;
+	height: auto;
+	position: fixed;
+	z-index: 5;
+	top: 79px;
+	transition: .3s;
+}
+
+#menuVertical ul{
+	display: block;
+	width: 54px;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: relative;
+}
+
+#menuVertical ul li{
+	display: block;
+	width: 175px;
+	position: relative;
+}
+
+#menuVertical ul li a{
+	position: relative;
+	display: block;
+	width: 250px;
+	height: auto;
+	box-sizing: border-box;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #ccc;
+	line-height: 2em;
+	padding: 10px 15px;
+	background: rgb(4, 52, 65);
+	text-decoration: none;
+	text-shadow: 2px 2px 3px #222;
+}
+
+#menuVertical ul li a:hover,
+#menuVertical ul li:hover a{
+	background: rgb(30, 60, 67);
+	color: #fff;
+} /*Änderung der Farbe für die Navigationsleiste*/
+
+#menuVertical ul li ul{
+	position: absolute;
+	top: 0px;
+	left: 198px;
+	display: none;
+	width: auto;
+}
+
+#menuVertical ul li:hover ul{
+	display: block;
+}
+
+#menuVertical ul li ul li a{
+	white-space: nowrap;
+	text-transform: none;
+	padding: 10px 20px;
+	width: 190px;
+}
+
+#menuVertical ul li ul li a:hover{
+	background: rgb(38, 79, 88);
+	color: #fff;
+} /*Änderung der Farbe für die Navigationsleiste*/
+
+.img_n{
+	transition: .3s;
+	/*Übergänge oder Animationen von Icons*/
+}
+
+.img_n:hover{
+	margin-left: 5px;
+	transition: .3s;
+}
+
+@media screen and (max-width: 1152px){
+	
+	#menuVertical ul li a{
+		width: 57px;
+		transition: .3s;
+	}
+
+	#menuVertical ul li{
+		width: 57px;
+	}
+
+	#menuVertical ul li ul li a{
+		left: -141px;
+	}
+
+	span{
+		display: none;
+	}
+
+	.img_n img{
+		height: 40px;
+		margin-left: -7px;
+		margin-top: 9px;
+	}
+} /*Wenn der Bildschirm kleiner als 1152px ist, werden die Icons angezeigt*/
+
+@media screen and (min-width: 1152px){
+	.img_n img{
+		display: none;
+	}
+} /*Wenn der Bildschirm kleiner als 1152px ist, werden die Icons angezeigt*/
+
+/*Design der Navigationsleiste: Ende*/
+
+p{
+	color: black;
+	font-weight: 600;
+} /*Schriftfarbe und Schriftgewicht für die Absätze*/
+
+h1 {
+	font-size: 250%;
+} /*Schriftgröße für den ersten Überschrift*/
+
+/*Design der Navigationsleiste für Verlinkung anderer Webseiten: Anfang*/
+
+div.scrollmenu {
+	background-color: rgb(4, 52, 65);
+	overflow: auto;
+	white-space: nowrap;
+  } /*Änderung des Designs für den Hintergrund*/
+  
+  div.scrollmenu a {
+	display: inline-block;
+	color: white;
+	text-align: center;
+	padding: 29px;
+	text-decoration: none;
+  } /*Änderung des Designs für den Schrift*/
+  
+  div.scrollmenu a:hover {
+	background-color: rgb(51, 123, 145);
+  } /*Änderung des Designs wenn man den Mauszeiger darauf bewegt*/
+
+  /*Design der Navigationsleiste für Verlinkung anderer Webseiten: Ende*/

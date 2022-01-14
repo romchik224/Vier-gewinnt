@@ -1,0 +1,50 @@
+package einfuehrung;
+
+import java.util.ArrayList;
+
+import java.util.Scanner;
+
+public class ArrayList_1 {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		ArrayList liste = new ArrayList();
+
+		boolean programm = true;
+		while (programm == true) {
+
+			System.out.println("\t***toDo-Liste***");
+			System.out.println("[1] Liste anzeigen\n[2] Notiz hinzufugen\n[3] Notiz loschen\n[4] Anzahl von Notizen\n[5] Notiz uberschreiben");
+			System.out.println("Was wollen Sie tun: ");
+
+			int fun = s.nextInt();
+			switch (fun) {
+			case 1:
+				System.out.println(liste);
+				break;
+
+			case 2:
+				System.out.println("Geben Sie ihre Notiz: ");
+				String notiz = s.next();
+				liste.add(notiz);
+				break;
+
+			case 3:
+				System.out.println("Welche Notiz wollen Sie loschen: ");
+				String losch = s.next();
+				liste.remove(losch);
+				break;
+				
+			case 4:
+				int gro = liste.size();
+				System.out.println(gro);
+				break;
+				
+			case 5:
+				System.out.println("Welche Notiz (Zahl) wollen Sie uberschreiben: ");
+				int stelle = s.nextInt();
+				System.out.println(liste.get(stelle - 1));
+			}
+		}
+	}
+}

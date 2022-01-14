@@ -1,0 +1,68 @@
+package einfuehrung;
+
+import java.util.Scanner;
+
+public class Array_4 {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		String plan[][] = new String[5][5];
+		plan[0][0] = "En";
+		plan[0][1] = "Ch";
+		plan[0][2] = "De";
+		plan[0][3] = "Ch";
+		plan[0][4] = "In";
+		plan[1][0] = "Ma";
+		plan[1][1] = "In";
+		plan[1][2] = "En";
+		plan[1][3] = "Ge";
+		plan[1][4] = "Ge";
+		plan[2][0] = "Ph";
+		plan[2][1] = "Ph";
+		plan[2][2] = "Ma";
+		plan[2][3] = "Wi";
+		plan[2][4] = "De";
+		plan[3][0] = "Wi";
+		plan[3][1] = "Bi";
+		plan[3][2] = "  ";
+		plan[3][3] = "Ku";
+		plan[3][4] = "  ";
+		
+		boolean programm = true;
+		while (programm == true) {
+			System.out.println(
+					"******Stundenplanmanager******\n[1] Stundenplan ausgeben\n[2] Stunde eintragen\n[3] Programm beenden\nWas wollen Sie tun: ");
+			int fun = s.nextInt();
+			switch (fun) {
+			case 1:
+				System.out.println("\tStundenplan\n");
+				System.out.println("Mo\tDi\tMi\tDo\tFr");
+				System.out.println("----------------------------------");
+				System.out.println(
+						plan[0][0] + "\t" + plan[0][1] + "\t" + plan[0][2] + "\t" + plan[0][3] + "\t" + plan[0][4]);
+				System.out.println(
+						plan[1][0] + "\t" + plan[1][1] + "\t" + plan[1][2] + "\t" + plan[1][3] + "\t" + plan[1][4]);
+				System.out.println(
+						plan[2][0] + "\t" + plan[2][1] + "\t" + plan[2][2] + "\t" + plan[2][3] + "\t" + plan[2][4]);
+				System.out.println(
+						plan[3][0] + "\t" + plan[3][1] + "\t" + plan[3][2] + "\t" + plan[3][3] + "\t" + plan[3][4]);
+				break;
+
+			case 2:
+				System.out.println("\t**Stunden eintragen**");
+				System.out.println("Welche Stunde[1-4]: ");
+				int stunde = s.nextInt();
+				System.out.println("Welcher Tag[1-5]: ");
+				int tag = s.nextInt();
+				System.out.println("Welcher Fach: ");
+				String fach = s.next();
+				plan[stunde - 1][tag - 1] = fach;
+				break;
+
+			case 3:
+				System.out.println("Programm beendet");
+				return;
+			}
+		}
+	}
+}
